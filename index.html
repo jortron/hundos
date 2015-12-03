@@ -2,7 +2,7 @@
 <head>
     <title>HUNDRED VISIONS</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
      <script src="js/lightbox.js"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -17,18 +17,37 @@
     });
 </script>
 
+<script type="text/javascript">
+    $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+
 </head>
 
 <body>
+<!-- NAV BAR BEGIN -->
    <div id="nav">
     <a href="#home"><img src="images/eye.gif" height="50px" style="padding-left: 15px"></a>
+
        <ul id="ulnav">
-        <li><a href="#shows">SHOWS</a></li>
-        <li><a href="#photos">PHOTOS</a></li>
-        <li><a href="#music">MUSIC</a></li>
-        <li><a href="#links">LINKS</a></li>
-       
-   </div>
+        
+            <li><a href="#shows">SHOWS</a></li>
+            <li><a href="#photos">PHOTOS</a></li>
+            <li><a href="#music">MUSIC</a></li>
+            <li><a href="#links">LINKS</a></li>
+       </div>
   
 <a name="home"></a>
     <div id="wall_1" class="image" data-stellar-background-ratio="0.4"></div>
@@ -36,9 +55,10 @@
     <div id="content_1" class="content">
      
         <center>
-            <h2>DECEMBER 3rd | HOTEL VEGAS</h2><br>
+            <h2>DECEMBER 3rd @ BARRACUDA</h2>
+            <h3>611 East 7th Street</h2>
             <a href="images/goodvibrations.jpg" target="_blank"><img src="images/goodvibrations.jpg" width="700px"></a><br>
-            BUY TICKETS <a href="https://www.eventbrite.com/e/good-vibrations-ii-4-days-of-peace-love-and-punk-tickets-18802271099">HERE</a>
+            BUY TICKETS <a href="https://www.eventbrite.com/e/good-vibrations-day-1-with-king-louie-jack-oblivian-tickets-19406581608" target="_blank">HERE</a>
             
         </center>
         
@@ -85,6 +105,11 @@
     <div id="content_4" class="content">
         
             <center>
+            <br>
+            <br>
+            <br>
+            <br>
+
                 <ul>
                     <li><a href="http://www.pauwaurecords.com/hundred-visions.html" target="_blank">BUY 'SPITE' ON LP</a></li>
                     <li><a href="http://hundredvisions.bandcamp.com/" target="_blank">BANDCAMP</a></li>
